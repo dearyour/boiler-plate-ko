@@ -28,7 +28,7 @@ mongoose
     .then(() => console.log("MongoDB Connected..."))
     .catch((err) => console.log(err));
 
-app.get("/", (req, res) => res.send("Hello World!sssss"));
+app.get("/", (req, res) => res.send("Hello World!sssss방가룽 "));
 
 app.post("/register", (req, res) => {
     const user = new User(req.body);
