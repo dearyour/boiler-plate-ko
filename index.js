@@ -28,7 +28,7 @@ mongoose
 
 app.get("/", (req, res) => res.send("Hello World!sssss방가룽 "));
 
-app.post("/register", (req, res) => {
+app.post("api/users/register", (req, res) => {
   const user = new User(req.body);
 
   user.save((err, userInfo) => {
@@ -43,7 +43,7 @@ app.post("/register", (req, res) => {
   });
 });
 
-app.post("/login", (req, res) => {
+app.post("api/users/login", (req, res) => {
   //요청된 이메일을 데이터베이스에서 있는지 찾는다.
   User.findOne(
     {
